@@ -4463,19 +4463,17 @@ margin-right: 10px;
   letter-spacing: 0.6px;
 }
 
-/* 2. Olive Secondary Buttons (Great for "Explore Cities" or outline buttons) */
-.hero .hero-buttons .btn.btn-outline,
-.btn-olive {
-  background-color: var(--marlowby-olive);
-  color: var(--marlowby-cream);
-  border-color: var(--marlowby-olive);
+/* 2. Solid Matching Terracotta Secondary Button */
+.hero .hero-buttons .btn.btn-outline {
+  background-color: var(--marlowby-terracotta);
+  color: var(--contrast-color);
+  border-color: var(--marlowby-terracotta);
 }
 
-.hero .hero-buttons .btn.btn-outline:hover,
-.btn-olive:hover {
-  background-color: color-mix(in srgb, var(--marlowby-olive), black 15%);
-  border-color: var(--marlowby-gold);
-  color: #ffffff;
+.hero .hero-buttons .btn.btn-outline:hover {
+  background-color: color-mix(in srgb, var(--marlowby-terracotta), black 15%);
+  border-color: color-mix(in srgb, var(--marlowby-terracotta), black 15%);
+  color: var(--contrast-color);
 }
 
 /* 3. Gold Section Subtitle Underlines & Hover Highlights */
