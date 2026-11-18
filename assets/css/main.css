@@ -4464,17 +4464,21 @@ margin-right: 10px;
   letter-spacing: 0.6px;
 }
 
-/* 2. Solid Matching Terracotta Secondary Button */
+  /* 2. Solid Matching Terracotta Secondary Button with Hover Effect */
 .hero .hero-buttons .btn.btn-outline {
   background-color: var(--marlowby-terracotta);
   color: var(--contrast-color);
   border-color: var(--marlowby-terracotta);
+  transition: all 0.3s ease;
 }
 
 .hero .hero-buttons .btn.btn-outline:hover {
   background-color: color-mix(in srgb, var(--marlowby-terracotta), black 15%);
   border-color: color-mix(in srgb, var(--marlowby-terracotta), black 15%);
   color: var(--contrast-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--marlowby-gold), transparent 50%);
+}
 }
 
 /* 3. Gold Section Subtitle Underlines & Hover Highlights */
