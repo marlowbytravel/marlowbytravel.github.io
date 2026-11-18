@@ -4571,3 +4571,15 @@ margin-right: 10px;
   color: #3B281E;
   margin-bottom: 0.35rem;
 }
+/* Force Terracotta on Section Titles & Lines */
+.section-title span,
+.section-title .description-title {
+  color: #C85A32 !important;
+}
+
+.section-title span::after,
+.section-title .description-title::after,
+.section-title h2::after {
+  background: #C85A32 !important;
+  background-color: #C85A32 !important;
+}
