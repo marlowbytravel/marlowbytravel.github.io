@@ -1,40 +1,38 @@
-/**
-* Template Name: LeadPage
-* Template URL: https://bootstrapmade.com/leadpage-bootstrap-landing-page-template/
-* Updated: Aug 12 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Lato",  sans-serif;
   --nav-font: "Montserrat",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/*--------------------------------------------------------------
+# Global Colors - Marlowby Palette
+--------------------------------------------------------------*/
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #1a1715; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #110a06; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #c85716; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  /* Custom Marlowby 5-Color Brand Palette */
+  --marlowby-terracotta: #C85A32; /* Primary accent, buttons, highlights */
+  --marlowby-gold: #D9A036;       /* Secondary badges, hover states, stars */
+  --marlowby-cream: #FAF6F0;      /* Warm main page background */
+  --marlowby-brown: #3B281E;      /* Dark headings & main body text */
+  --marlowby-olive: #5E6B47;      /* Secondary sections, borders, tags */
+
+  /* Template Overrides (Updates the entire website) */
+  --background-color: var(--marlowby-cream); 
+  --default-color: var(--marlowby-brown); 
+  --heading-color: var(--marlowby-brown); 
+  --accent-color: var(--marlowby-terracotta); 
+  --surface-color: #ffffff; 
+  --contrast-color: #ffffff; 
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu Colors */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.8);  /* The default color of the main navmenu links */
-  --nav-hover-color: #c85716; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #1a1715; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #c85716; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: rgba(255, 255, 255, 0.85);  
+  --nav-hover-color: var(--marlowby-gold); 
+  --nav-mobile-background-color: var(--marlowby-cream); 
+  --nav-dropdown-background-color: #ffffff; 
+  --nav-dropdown-color: var(--marlowby-brown); 
+  --nav-dropdown-hover-color: var(--marlowby-terracotta); 
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
