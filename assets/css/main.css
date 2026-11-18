@@ -4503,3 +4503,19 @@ margin-right: 10px;
   color: var(--marlowby-brown);
   font-weight: 600;
 }
+/*--------------------------------------------------------------
+# Force Global Brand Background & Text Colors
+--------------------------------------------------------------*/
+body, 
+#header, 
+.header, 
+section:not(.dark-background):not(#hero) {
+  background-color: var(--marlowby-cream) !important;
+  color: var(--marlowby-brown) !important;
+}
+
+/* Force all standard headings to Espresso Brown */
+h1, h2, h3, h4, h5, h6, 
+.heading-color {
+  color: var(--marlowby-brown) !important;
+}
