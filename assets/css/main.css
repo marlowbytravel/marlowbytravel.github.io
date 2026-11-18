@@ -4583,12 +4583,3 @@ margin-right: 10px;
   background: #C85A32 !important;
   background-color: #C85A32 !important;
 }
-/* Draw the terracotta line directly under the small uppercase header */
-.section-title .description-title,
-.section-title span {
-  display: inline-block;
-  color: #C85A32 !important;
-  border-bottom: 2px solid #C85A32 !important;
-  padding-bottom: 6px;
-  margin-bottom: 12px;
-}
