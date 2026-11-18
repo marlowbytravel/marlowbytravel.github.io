@@ -1228,7 +1228,7 @@ section,
 }
 
 .about .image-wrapper img {
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
@@ -1237,8 +1237,9 @@ section,
   bottom: -2rem;
   left: -2rem;
   background-color: var(--surface-color);
-  padding: 2rem;
-  border-radius: 12px;
+  border-left: 4px solid var(--marlowby-gold, #D9A036)
+  padding: 1.75rem;
+  border-radius: 6px;
   max-width: 320px;
   box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 80%);
 }
