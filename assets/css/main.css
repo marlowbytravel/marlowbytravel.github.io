@@ -4446,12 +4446,13 @@ margin-right: 10px;
 # Marlowby Olive & Gold Accents
 --------------------------------------------------------------*/
 
-/* 1. Hero "Now Shipping" Location Banner */
+/* 1. Transparent Hero Location Banner with Gold Border */
 .location-banner {
-  background-color: var(--marlowby-olive);
+  background-color: rgba(59, 40, 30, 0.4); /* Soft semi-transparent dark tint for readability */
   color: var(--marlowby-cream);
   font-size: 0.9rem;
   border: 1.5px solid var(--marlowby-gold);
+  backdrop-filter: blur(4px); /* Gives it a frosted glass effect */
   letter-spacing: 0.2px;
 }
 
