@@ -4452,22 +4452,20 @@ margin-right: 10px;
 # Marlowby Olive & Gold Accents
 --------------------------------------------------------------*/
 
-/* 1. Transparent Hero Location Banner with Gold Border */
+/* Rectangular Location Banner & Live Tag */
 .location-banner {
-  background-color: rgba(59, 40, 30, 0.4); /* Soft semi-transparent dark tint for readability */
-  color: var(--marlowby-cream);
-  font-size: 0.9rem;
+  border-radius: 6px !important;
+  background-color: rgba(59, 40, 30, 0.4); /* Frosted glass espresso tint */
   border: 1.5px solid var(--marlowby-gold);
-  backdrop-filter: blur(4px); /* Gives it a frosted glass effect */
-  letter-spacing: 0.2px;
+  backdrop-filter: blur(4px);
+  color: var(--marlowby-cream);
 }
 
 .location-banner .live-dot {
-  background-color: var(--marlowby-terracotta);
-  color: var(--marlowby-brown);
+  border-radius: 4px !important;
+  background-color: var(--marlowby-gold) !important;
+  color: var(--marlowby-brown) !important;
   font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.6px;
 }
 
   /* 2. Solid Matching Terracotta Secondary Button with Hover Effect */
