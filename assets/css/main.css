@@ -38,7 +38,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #fffaf2;
+  --background-color:var(--marlowby-cream);
   --surface-color: #ffffff;
 }
 
@@ -206,7 +206,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #1a1715;
+  --background-color: var(--marlowby-brown);
 }
 
 /*--------------------------------------------------------------
