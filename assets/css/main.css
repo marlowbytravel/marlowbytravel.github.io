@@ -4583,3 +4583,7 @@ margin-right: 10px;
   background: #C85A32 !important;
   background-color: #C85A32 !important;
 }
+.hero h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 700;
+}
