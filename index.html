@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Marlowby - Explore a new city, one box at a time</title>
@@ -722,7 +723,7 @@ function renderCityGrid() {
         <p>${city.tagline}</p>
         <button class="city-explore-button" type="button"
           onclick="openCityModal('${city.id}')">
-          Explore City <span aria-hidden="true">↗</span>
+          Explore City <span aria-hidden="true"><span class="material-symbols-outlined">arrow_outward</span></span>
         </button>
       </div>
     </article>
