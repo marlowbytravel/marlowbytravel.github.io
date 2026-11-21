@@ -609,267 +609,197 @@
 
     </section><!-- /Call To Action Section -->
 
-   <!-- Explore Our Cities Section -->
-<section id="cities" class="py-20 px-6 max-w-7xl mx-auto">
+   <!-- Cities Section -->
+<section id="cities" class="cities section">
+  <div class="container">
     <div class="container section-title" data-aos="fade-up">
-        <span class="subtitle">Destinations</span>
-        <h2>Cities We Offer</h2>
-        <p>Explore the hand-curated monthly destination boxes delivered straight to your door.</p>
-    </div><!-- End Section Title -->
-
-    <!-- Responsive Grid: 2 columns on desktop, 1 on mobile -->
-    <div id="city-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-        <!-- City cards will be dynamically injected here by JavaScript -->
+      <span class="subtitle">Destinations</span>
+      <h2>Explore Our Cities</h2>
+      <p>Every city has a story. Every box brings it to you.</p>
     </div>
+
+    <div id="city-grid" class="city-grid" aria-live="polite"></div>
+  </div>
 </section>
 
-<!-- City Detail Modal / View -->
-<div id="city-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 p-4">
-    <div id="city-modal-content" class="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[6px] shadow-2xl transform scale-95 transition-transform duration-300 relative">
-        <!-- Modal content injected dynamically -->
-    </div>
+<!-- City Detail Modal -->
+<div id="city-modal" class="city-modal" aria-hidden="true">
+  <div id="city-modal-content" class="city-modal-content"
+       role="dialog" aria-modal="true" aria-labelledby="city-modal-title">
+  </div>
 </div>
 
 <script>
-    // City Data Structure (No months included, dynamic expandability)
-    const citiesData = [
-        {
-            id: "chicago",
-            name: "Chicago",
-            state: "Illinois",
-            tagline: "Neighborhood community, century-old street markets, and classic comfort food.",
-            image: "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?auto=format&fit=crop&w=1200&q=80",
-            description: "Chicago is built on a strong neighborhood community and weekend traditions. From century-old street markets on Maxwell Street to indie craft fairs in Wicker Park and Andersonville, the city brings together classic comfort food and local handmade goods.",
-            products: [
-                {
-                    name: "Chicago-style sweet-and-savory caramel & cheddar popcorn",
-                    description: "The iconic sweet-and-savory twin blend capturing authentic Midwestern snacking tradition.",
-                    image: "https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Spicy Italian-style giardiniera relish",
-                    description: "Crisp vegetables and peppers pickled in oil and spices, a true Chicago culinary staple.",
-                    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Handcrafted artisan ceramic dish or pottery piece",
-                    description: "Locally styled pottery reflecting the creative energy of neighborhood art studios.",
-                    image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Illustrated neighborhood art print and greeting cards",
-                    description: "Original artwork celebrating Chicago's historic architectural landmarks and streetscapes.",
-                    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80"
-                }
-            ]
-        },
-        {
-            id: "austin",
-            name: "Austin",
-            state: "Texas",
-            tagline: "Live music hubs, creative neighborhood strips, and morning breakfast tacos.",
-            image: "https://images.unsplash.com/photo-1531218150217-54595bc2b934?auto=format&fit=crop&w=1200&q=80",
-            description: "Austin blends live music hubs and creative neighborhood strips from South Congress out to East Austin. Known as the Live Music Capital of the World, the city's everyday culture combines outdoor patios, Texas barbecue, and morning breakfast tacos.",
-            products: [
-                {
-                    name: "Central Texas-style smoked brisket dry rub",
-                    description: "A bold, coarse-ground pepper and spice blend crafted for authentic pit-smoked barbecue flavor.",
-                    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Austin-inspired breakfast taco seasoning blend",
-                    description: "An aromatic spice mix designed to elevate morning eggs, potatoes, and homemade tortillas.",
-                    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "South Congress neighborhood art print",
-                    description: "Vibrant graphic art capturing the colorful neon signs and iconic storefronts of SoCo.",
-                    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Handcrafted local artisan ceramic coaster",
-                    description: "Durable, earth-toned stoneware crafted by independent makers in East Austin.",
-                    image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=600&q=80"
-                }
-            ]
-        },
-        {
-            id: "portland",
-            name: "Portland",
-            state: "Oregon",
-            tagline: "Independent maker spirit, open-air art markets, and Pacific Northwest flavors.",
-            image: "https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&w=1200&q=80",
-            description: "Portland bridges creative urban districts from the Pearl District and Alberta Arts to historic neighborhood street fairs. Known for its independent maker spirit, open-air art markets, and vibrant food culture, the city's everyday identity celebrates local artisans and Pacific Northwest flavors.",
-            products: [
-                {
-                    name: "Portland-style artisan doughnut-inspired treat",
-                    description: "Sweet, confectionery homage to the city's legendary independent doughnut culture.",
-                    image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Oregon Marionberry jam",
-                    description: "Rich, tart-sweet preserves crafted from the Pacific Northwest's signature berry.",
-                    image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Handcrafted ceramic mug",
-                    description: "Ergonomic stoneware mug designed for slow mornings and specialty pour-over coffee.",
-                    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Portland neighborhood art print",
-                    description: "Charming illustrated tribute to local bridges, evergreen forests, and neighborhood storefronts.",
-                    image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80"
-                }
-            ]
-        },
-        {
-            id: "new-orleans",
-            name: "New Orleans",
-            state: "Louisiana",
-            tagline: "Historic Creole architecture, jazz roots, and deep culinary traditions.",
-            image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
-            description: "New Orleans mixes historic Creole architecture from the French Quarter and Tremé to live brass music on Frenchmen Street. Known for its unmatched jazz roots, ornate wrought-iron balconies, and deep culinary traditions, the city celebrates rich Creole spices and iconic southern sweets.",
-            products: [
-                {
-                    name: "Classic New Orleans-style beignet baking mix and powdered sugar",
-                    description: "Everything needed to recreate light, fluffy, powdered-sugar-dusted café beignets at home.",
-                    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Authentic Louisiana Creole seasoning blend",
-                    description: "A balanced savory herb and spice mix capturing the soulful heat of Gulf Coast cooking.",
-                    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Traditional chicory-blend coffee",
-                    description: "Bold, smooth dark roast coffee blended with aromatic roasted chicory root.",
-                    image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "French Quarter historic architecture art print",
-                    description: "Detailed illustration showcasing ornate ironwork balconies and historic gas-lit courtyards.",
-                    image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=600&q=80"
-                }
-            ]
-        },
-        {
-            id: "st-charles",
-            name: "St. Charles",
-            state: "Missouri",
-            tagline: "Brick-lined Main Street, riverfront heritage, and regional bakeries.",
-            image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-            description: "St. Charles anchors America's frontier heritage along Missouri’s historic brick-lined Main Street and the banks of the Missouri River. Known for its vibrant Saturday open-air markets, 19th-century architecture, and rich local maker traditions, the city's everyday culture celebrates handcrafted goods, bakery sweets, and regional foods.",
-            products: [
-                {
-                    name: "St. Louis-style smoky barbecue seasoning",
-                    description: "Rich blend of brown sugar, smoked paprika, and savory spices tailored for Midwest grill masters.",
-                    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Classic St. Louis-style butter cake baking mix",
-                    description: "Rich, gooey, sweet butter cake mix honoring Missouri's legendary bakery tradition.",
-                    image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Locally roasted coffee beans from historic Main Street",
-                    description: "Small-batch artisanal roast capturing the cozy, welcoming ambiance of Main Street shops.",
-                    image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=600&q=80"
-                },
-                {
-                    name: "Historic Main Street brick-paved district art print",
-                    description: "Nostalgic art print highlighting nineteenth-century storefronts and historic river heritage.",
-                    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
-                }
-            ]
-        }
-    ];
+const citiesData = [
+  {
+    id: "chicago",
+    name: "Chicago",
+    state: "Illinois",
+    tagline: "Neighborhood community, century-old street markets, and classic comfort food.",
+    image: "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?auto=format&fit=crop&w=1200&q=80",
+    description: "Chicago is built on a strong neighborhood community and weekend traditions. From century-old street markets on Maxwell Street to indie craft fairs in Wicker Park and Andersonville, the city brings together classic comfort food and local handmade goods.",
+    products: [
+      { name: "Chicago-style sweet-and-savory caramel & cheddar popcorn", description: "The iconic sweet-and-savory twin blend capturing authentic Midwestern snacking tradition.", image: "https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=600&q=80" },
+      { name: "Spicy Italian-style giardiniera relish", description: "Crisp vegetables and peppers pickled in oil and spices, a true Chicago culinary staple.", image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" },
+      { name: "Handcrafted artisan ceramic dish or pottery piece", description: "Locally styled pottery reflecting the creative energy of neighborhood art studios.", image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80" },
+      { name: "Illustrated neighborhood art print and greeting cards", description: "Original artwork celebrating Chicago's historic architectural landmarks and streetscapes.", image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" }
+    ]
+  },
+  {
+    id: "austin",
+    name: "Austin",
+    state: "Texas",
+    tagline: "Live music hubs, creative neighborhood strips, and morning breakfast tacos.",
+    image: "https://images.unsplash.com/photo-1531218150217-54595bc2b934?auto=format&fit=crop&w=1200&q=80",
+    description: "Austin blends live music hubs and creative neighborhood strips from South Congress out to East Austin. Known as the Live Music Capital of the World, the city's everyday culture combines outdoor patios, Texas barbecue, and morning breakfast tacos.",
+    products: [
+      { name: "Central Texas-style smoked brisket dry rub", description: "A bold, coarse-ground pepper and spice blend crafted for authentic pit-smoked barbecue flavor.", image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" },
+      { name: "Austin-inspired breakfast taco seasoning blend", description: "An aromatic spice mix designed to elevate morning eggs, potatoes, and homemade tortillas.", image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" },
+      { name: "South Congress neighborhood art print", description: "Vibrant graphic art capturing the colorful neon signs and iconic storefronts of SoCo.", image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80" },
+      { name: "Handcrafted local artisan ceramic coaster", description: "Durable, earth-toned stoneware crafted by independent makers in East Austin.", image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=600&q=80" }
+    ]
+  },
+  {
+    id: "portland",
+    name: "Portland",
+    state: "Oregon",
+    tagline: "Independent maker spirit, open-air art markets, and Pacific Northwest flavors.",
+    image: "https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&w=1200&q=80",
+    description: "Portland bridges creative urban districts from the Pearl District and Alberta Arts to historic neighborhood street fairs. Known for its independent maker spirit, open-air art markets, and vibrant food culture, the city's everyday identity celebrates local artisans and Pacific Northwest flavors.",
+    products: [
+      { name: "Portland-style artisan doughnut-inspired treat", description: "Sweet, confectionery homage to the city's legendary independent doughnut culture.", image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" },
+      { name: "Oregon Marionberry jam", description: "Rich, tart-sweet preserves crafted from the Pacific Northwest's signature berry.", image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" },
+      { name: "Handcrafted ceramic mug", description: "Ergonomic stoneware mug designed for slow mornings and specialty pour-over coffee.", image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" },
+      { name: "Portland neighborhood art print", description: "Charming illustrated tribute to local bridges, evergreen forests, and neighborhood storefronts.", image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80" }
+    ]
+  },
+  {
+    id: "new-orleans",
+    name: "New Orleans",
+    state: "Louisiana",
+    tagline: "Historic Creole architecture, jazz roots, and deep culinary traditions.",
+    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
+    description: "New Orleans mixes historic Creole architecture from the French Quarter and Tremé to live brass music on Frenchmen Street. Known for its unmatched jazz roots, ornate wrought-iron balconies, and deep culinary traditions, the city celebrates rich Creole spices and iconic southern sweets.",
+    products: [
+      { name: "Classic New Orleans-style beignet baking mix and powdered sugar", description: "Everything needed to recreate light, fluffy, powdered-sugar-dusted café beignets at home.", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" },
+      { name: "Authentic Louisiana Creole seasoning blend", description: "A balanced savory herb and spice mix capturing the soulful heat of Gulf Coast cooking.", image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" },
+      { name: "Traditional chicory-blend coffee", description: "Bold, smooth dark roast coffee blended with aromatic roasted chicory root.", image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" },
+      { name: "French Quarter historic architecture art print", description: "Detailed illustration showcasing ornate ironwork balconies and historic gas-lit courtyards.", image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=600&q=80" }
+    ]
+  },
+  {
+    id: "st-charles",
+    name: "St. Charles",
+    state: "Missouri",
+    tagline: "Brick-lined Main Street, riverfront heritage, and regional bakeries.",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    description: "St. Charles anchors America's frontier heritage along Missouri’s historic brick-lined Main Street and the banks of the Missouri River. Known for its vibrant Saturday open-air markets, 19th-century architecture, and rich local maker traditions, the city's everyday culture celebrates handcrafted goods, bakery sweets, and regional foods.",
+    products: [
+      { name: "St. Louis-style smoky barbecue seasoning", description: "Rich blend of brown sugar, smoked paprika, and savory spices tailored for Midwest grill masters.", image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" },
+      { name: "Classic St. Louis-style butter cake baking mix", description: "Rich, gooey, sweet butter cake mix honoring Missouri's legendary bakery tradition.", image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=600&q=80" },
+      { name: "Locally roasted coffee beans from historic Main Street", description: "Small-batch artisanal roast capturing the cozy, welcoming ambiance of Main Street shops.", image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=600&q=80" },
+      { name: "Historic Main Street brick-paved district art print", description: "Nostalgic art print highlighting nineteenth-century storefronts and historic river heritage.", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" }
+    ]
+  }
+];
 
-    // Render City Cards dynamically
-    function renderCityGrid() {
-        const grid = document.getElementById('city-grid');
-        grid.innerHTML = citiesData.map(city => `
-            <div class="bg-white rounded-[6px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-neutral-100 flex flex-col group cursor-pointer" onclick="openCityModal('${city.id}')">
-                <div class="relative overflow-hidden aspect-[16/10]">
-                    <img src="${city.image}" alt="${city.name}, ${city.state}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="p-6 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h3 class="text-2xl font-bold text-neutral-900 mb-1">${city.name}, ${city.state}</h3>
-                        <p class="text-neutral-600 text-sm mb-6">${city.tagline}</p>
-                    </div>
-                    <div>
-                        <button class="inline-flex items-center text-sm font-semibold text-neutral-900 group-hover:text-primary transition-colors">
-                            Explore City 
-                            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                        </button>
-                    </div>
-                </div>
+function renderCityGrid() {
+  const grid = document.getElementById("city-grid");
+  if (!grid) return;
+
+  grid.innerHTML = citiesData.map(city => `
+    <article class="city-card">
+      <button class="city-card-image-button" type="button"
+        onclick="openCityModal('${city.id}')"
+        aria-label="Explore ${city.name}, ${city.state}">
+        <img class="city-card-image" src="${city.image}"
+          alt="${city.name}, ${city.state}" loading="lazy">
+      </button>
+
+      <div class="city-card-body">
+        <div class="city-card-location">${city.state}</div>
+        <h3>${city.name}</h3>
+        <p>${city.tagline}</p>
+        <button class="city-explore-button" type="button"
+          onclick="openCityModal('${city.id}')">
+          Explore City <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </article>
+  `).join("");
+}
+
+function openCityModal(cityId) {
+  const city = citiesData.find(item => item.id === cityId);
+  if (!city) return;
+
+  const modal = document.getElementById("city-modal");
+  const modalContent = document.getElementById("city-modal-content");
+
+  modalContent.innerHTML = `
+    <button class="city-modal-close" type="button"
+      onclick="closeCityModal()" aria-label="Close city details">×</button>
+
+    <div class="city-modal-hero">
+      <img src="${city.image}" alt="${city.name}, ${city.state}">
+      <div class="city-modal-hero-copy">
+        <span>${city.state}</span>
+        <h2 id="city-modal-title">${city.name}</h2>
+        <p>${city.tagline}</p>
+      </div>
+    </div>
+
+    <div class="city-modal-body">
+      <p class="city-full-description">${city.description}</p>
+
+      <div class="city-box-heading">
+        <span>THE MARLOWBY EDITION</span>
+        <h3>Inside the Box</h3>
+        <p>A little taste of what makes ${city.name} special.</p>
+      </div>
+
+      <div class="city-products-grid">
+        ${city.products.map(product => `
+          <article class="city-product">
+            <img src="${product.image}" alt="" loading="lazy">
+            <div>
+              <h4>${product.name}</h4>
+              <p>${product.description}</p>
             </div>
-        `).join('');
-    }
+          </article>
+        `).join("")}
+      </div>
 
-    // Modal Control Functions
-    function openCityModal(cityId) {
-        const city = citiesData.find(c => c.id === cityId);
-        if (!city) return;
+      <div class="city-modal-footer">
+        <button class="city-back-button" type="button"
+          onclick="closeCityModal()">Back to Cities</button>
+      </div>
+    </div>
+  `;
 
-        const modalContent = document.getElementById('city-modal-content');
-        modalContent.innerHTML = `
-            <button onclick="closeCityModal()" class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-md p-2 rounded-full text-neutral-800 hover:bg-neutral-100 transition-colors shadow-md">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </button>
-            
-            <div class="relative h-64 md:h-80 overflow-hidden">
-                <img src="${city.image}" alt="${city.name}" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6 md:p-8">
-                    <div>
-                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">${city.name}, ${city.state}</h2>
-                        <p class="text-white/90 text-sm md:text-base max-w-2xl">${city.tagline}</p>
-                    </div>
-                </div>
-            </div>
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("city-modal-open");
+}
 
-            <div class="p-6 md:p-8">
-                <p class="text-neutral-700 text-base md:text-lg leading-relaxed mb-8">${city.description}</p>
-                
-                <h3 class="text-2xl font-bold text-neutral-900 mb-6 pb-2 border-b border-neutral-200">Inside the Box</h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    ${city.products.map(product => `
-                        <div class="flex items-start space-x-4 p-4 rounded-[6px] bg-neutral-50 border border-neutral-100">
-                            <img src="${product.image}" alt="${product.name}" class="w-20 h-20 object-cover rounded-[6px] flex-shrink-0 shadow-sm">
-                            <div>
-                                <h4 class="font-semibold text-neutral-900 text-sm md:text-base mb-1">${product.name}</h4>
-                                <p class="text-neutral-600 text-xs md:text-sm leading-relaxed">${product.description}</p>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
+function closeCityModal() {
+  const modal = document.getElementById("city-modal");
+  if (!modal) return;
 
-                <div class="mt-8 pt-6 border-t border-neutral-200 flex justify-end">
-                    <button onclick="closeCityModal()" class="px-6 py-2.5 bg-neutral-900 text-white rounded-[6px] font-medium hover:bg-neutral-800 transition-colors shadow-sm">
-                        Back to Cities
-                    </button>
-                </div>
-            </div>
-        `;
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("city-modal-open");
+}
 
-        const modal = document.getElementById('city-modal');
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        document.getElementById('city-modal-content').classList.remove('scale-95');
-        document.body.style.overflow = 'hidden';
-    }
+document.addEventListener("DOMContentLoaded", renderCityGrid);
 
-    function closeCityModal() {
-        const modal = document.getElementById('city-modal');
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        document.getElementById('city-modal-content').classList.add('scale-95');
-        document.body.style.overflow = 'auto';
-    }
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeCityModal();
+});
 
-    // Initialize grid on load
-    document.addEventListener('DOMContentLoaded', renderCityGrid);
+document.getElementById("city-modal")?.addEventListener("click", event => {
+  if (event.target.id === "city-modal") closeCityModal();
+});
 </script>
     <!-- Pricing Section -->
     <section id="pricing" class="pricing section">
