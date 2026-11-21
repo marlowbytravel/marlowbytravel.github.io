@@ -4316,4 +4316,8 @@ margin-right: 10px;
   .city-modal-content {
     transition: none;
   }
+  .material-symbols-outlined {
+    font-size: 20px;
+    vertical-align: middle;
+}
 }
