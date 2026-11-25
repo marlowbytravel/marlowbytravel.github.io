@@ -446,15 +446,16 @@ h6 {
 }
 
 
+
 /*--------------------------------------------------------------
-# Global Footer - Marlowby Brand Theme
+# Global Footer - Marlowby Vintage Travel Theme
 --------------------------------------------------------------*/
 
 .footer {
   color: var(--marlowby-cream);
   background: var(--marlowby-brown);
   font-size: 14px;
-  padding: 80px 0 0;
+  padding: 75px 0 0;
   position: relative;
   border-top: 3px solid var(--marlowby-terracotta);
 }
@@ -466,16 +467,16 @@ h6 {
 
 .footer .footer-content .logo span {
   color: var(--marlowby-cream);
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   font-family: var(--heading-font);
 }
 
 /* Description */
 .footer .footer-content p {
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.8;
   color: var(--marlowby-cream);
   opacity: 0.85;
 }
@@ -487,24 +488,32 @@ h6 {
 
 .footer .newsletter-form h5 {
   color: var(--marlowby-gold);
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 600;
-  margin-bottom: 15px;
+  font-style: italic;
+  margin-bottom: 12px;
   font-family: var(--heading-font);
+}
+
+.footer .newsletter-form p {
+  color: var(--marlowby-cream);
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.8;
 }
 
 .footer .newsletter-form .input-group {
   position: relative;
   display: flex;
-  border-radius: 50px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .footer .newsletter-form input[type=email] {
   flex: 1;
-  padding: 12px 20px;
-  border: none;
+  padding: 13px 18px;
+  border: 1px solid var(--marlowby-cream);
   background-color: var(--marlowby-cream);
   color: var(--marlowby-brown);
   font-size: 14px;
@@ -535,7 +544,7 @@ h6 {
 }
 
 .footer .newsletter-form .btn-subscribe i {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .footer .newsletter-form .loading,
@@ -550,7 +559,7 @@ h6 {
   color: var(--marlowby-gold);
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   position: relative;
   font-family: var(--heading-font);
 }
@@ -559,8 +568,8 @@ h6 {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -8px;
-  width: 30px;
+  bottom: -9px;
+  width: 35px;
   height: 2px;
   background-color: var(--marlowby-terracotta);
 }
@@ -580,12 +589,12 @@ h6 {
 }
 
 .footer .footer-links ul li:hover {
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 
 .footer .footer-links ul a {
   color: var(--marlowby-cream);
-  opacity: 0.8;
+  opacity: 0.85;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -599,12 +608,12 @@ h6 {
 }
 
 .footer .footer-links ul a i {
-  margin-right: 8px;
+  margin-right: 9px;
   font-size: 12px;
   color: var(--marlowby-terracotta);
 }
 
-/* Contact Section */
+/* Contact */
 .footer .footer-contact .contact-item {
   display: flex;
   align-items: flex-start;
@@ -612,9 +621,9 @@ h6 {
 }
 
 .footer .footer-contact .contact-item .contact-icon {
-  width: 40px;
-  height: 40px;
-  background-color: var(--marlowby-olive);
+  width: 42px;
+  height: 42px;
+  background-color: var(--marlowby-terracotta);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -625,7 +634,7 @@ h6 {
 
 .footer .footer-contact .contact-item .contact-icon i {
   color: var(--marlowby-cream);
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .footer .footer-contact .contact-item .contact-info p {
@@ -633,7 +642,7 @@ h6 {
   color: var(--marlowby-cream);
   opacity: 0.85;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Social Links */
@@ -644,9 +653,9 @@ h6 {
 }
 
 .footer .social-links a {
-  width: 42px;
-  height: 42px;
-  background-color: var(--marlowby-olive);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(250, 246, 240, 0.1);
   color: var(--marlowby-cream);
   display: flex;
   align-items: center;
@@ -662,33 +671,23 @@ h6 {
   transform: translateY(-3px);
 }
 
-.footer .social-links a i {
-  font-size: 16px;
-}
-
-/* Footer Bottom */
+/* Vintage Divider */
 .footer .footer-bottom {
-  margin-top: 50px;
-  padding: 25px 0;
-  background-color: var(--marlowby-olive);
+  margin-top: 55px;
+  padding: 24px 0;
+  background-color: #302019;
   border-top: 1px solid var(--marlowby-gold);
 }
 
 .footer .footer-bottom .copyright p {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--marlowby-cream);
+  opacity: 0.85;
 }
 
 .footer .footer-bottom .copyright .sitename {
   color: var(--marlowby-gold);
-}
-
-@media (max-width: 991px) {
-  .footer .footer-bottom .copyright p {
-    text-align: center;
-    margin-bottom: 15px;
-  }
 }
 
 .footer .footer-bottom .footer-bottom-links {
@@ -696,15 +695,9 @@ h6 {
   margin-bottom: 8px;
 }
 
-@media (max-width: 991px) {
-  .footer .footer-bottom .footer-bottom-links {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-}
-
 .footer .footer-bottom .footer-bottom-links a {
   color: var(--marlowby-cream);
+  opacity: 0.75;
   font-size: 13px;
   margin-left: 20px;
   text-decoration: none;
@@ -717,24 +710,14 @@ h6 {
 
 .footer .footer-bottom .footer-bottom-links a:hover {
   color: var(--marlowby-gold);
+  opacity: 1;
 }
 
-@media (max-width: 991px) {
-  .footer .footer-bottom .footer-bottom-links a {
-    margin: 0 10px;
-  }
-}
-
+/* Credits */
 .footer .footer-bottom .credits {
   text-align: right;
   font-size: 13px;
   color: var(--marlowby-cream);
-}
-
-@media (max-width: 991px) {
-  .footer .footer-bottom .credits {
-    text-align: center;
-  }
 }
 
 .footer .footer-bottom .credits a {
@@ -742,14 +725,26 @@ h6 {
   text-decoration: none;
 }
 
-.footer .footer-bottom .credits a:hover {
-  text-decoration: underline;
+/* Responsive */
+@media (max-width: 991px) {
+  .footer .footer-bottom .copyright p,
+  .footer .footer-bottom .footer-bottom-links {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .footer .footer-bottom .footer-bottom-links a {
+    margin: 0 10px;
+  }
+
+  .footer .footer-bottom .credits {
+    text-align: center;
+  }
 }
 
-/* Mobile Layout */
 @media (max-width: 768px) {
   .footer {
-    padding: 60px 0 0;
+    padding: 55px 0 0;
   }
 
   .footer .footer-content {
@@ -759,24 +754,24 @@ h6 {
 
   .footer .footer-links,
   .footer .footer-contact {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 }
 
-/* Footer Form Styling Only */
+/* Footer Form Styling */
 .footer input[type=text],
 .footer input[type=email],
 .footer textarea {
   color: var(--marlowby-brown);
   background-color: var(--marlowby-cream);
   font-size: 14px;
-  border-color: var(--marlowby-olive);
+  border-color: var(--marlowby-terracotta);
 }
 
 .footer input[type=text]:focus,
 .footer input[type=email]:focus,
 .footer textarea:focus {
-  border-color: var(--marlowby-terracotta);
+  border-color: var(--marlowby-gold);
 }
 
 .footer input[type=text]::placeholder,
@@ -785,6 +780,7 @@ h6 {
   color: var(--marlowby-brown);
   opacity: 0.6;
 }
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -4085,85 +4081,3 @@ margin-right: 10px;
 }
 }
 
-/* Marlowby Footer - Warm Cream Version */
-
-.footer {
-  background: var(--marlowby-cream);
-  color: var(--marlowby-brown);
-  border-top: 3px solid var(--marlowby-terracotta);
-}
-
-.footer .footer-content .logo span {
-  color: var(--marlowby-brown);
-}
-
-.footer .footer-content p {
-  color: var(--marlowby-brown);
-  opacity: 0.85;
-}
-
-.footer .newsletter-form h5 {
-  color: var(--marlowby-terracotta);
-}
-
-.footer h4 {
-  color: var(--marlowby-brown);
-}
-
-.footer h4:after {
-  background-color: var(--marlowby-terracotta);
-}
-
-.footer .footer-links ul a {
-  color: var(--marlowby-brown);
-  opacity: 0.85;
-}
-
-.footer .footer-links ul a:hover {
-  color: var(--marlowby-terracotta);
-}
-
-.footer .footer-links ul a i {
-  color: var(--marlowby-olive);
-}
-
-.footer .footer-contact .contact-item .contact-icon {
-  background-color: var(--marlowby-olive);
-}
-
-.footer .footer-contact .contact-item .contact-icon i {
-  color: var(--marlowby-cream);
-}
-
-.footer .footer-contact .contact-item .contact-info p {
-  color: var(--marlowby-brown);
-}
-
-.footer .footer-bottom {
-  background-color: var(--marlowby-brown);
-  border-top: 2px solid var(--marlowby-gold);
-}
-
-.footer .footer-bottom .copyright p {
-  color: var(--marlowby-cream);
-}
-
-.footer .footer-bottom .copyright .sitename {
-  color: var(--marlowby-gold);
-}
-
-.footer .footer-bottom .footer-bottom-links a {
-  color: var(--marlowby-cream);
-}
-
-.footer .footer-bottom .footer-bottom-links a:hover {
-  color: var(--marlowby-gold);
-}
-
-.footer .footer-bottom .credits {
-  color: var(--marlowby-cream);
-}
-
-.footer .footer-bottom .credits a {
-  color: var(--marlowby-gold);
-}
