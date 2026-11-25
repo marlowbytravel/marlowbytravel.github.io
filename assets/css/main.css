@@ -1196,6 +1196,7 @@ section,
     padding: 12px 17px;
     font-size: 0.9rem;
   }
+
 }
 
 
@@ -3380,4 +3381,18 @@ section,
     vertical-align: middle;
 }
 }
+  #hero .hero-content p {
+  max-width: 620px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+#hero .hero-buttons .btn-outline {
+  background: transparent;
+  color: var(--marlowby-cream);
+  border: 1px solid var(--marlowby-cream);
+}
 
+#hero .hero-buttons .btn-outline:hover {
+  background: var(--marlowby-cream);
+  color: var(--marlowby-brown);
+}
