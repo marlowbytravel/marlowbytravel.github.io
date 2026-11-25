@@ -988,10 +988,11 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section - Marlowby Travel Editorial
 --------------------------------------------------------------*/
+
 .hero {
-  padding: 120px 0 60px 0;
+  padding: 120px 0 80px;
   min-height: 100vh;
   position: relative;
   display: flex;
@@ -999,18 +1000,10 @@ section,
   overflow: hidden;
 }
 
-.hero .hero-content {
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  z-index: 3;
-}
-
+/* Background Video */
 .hero .video-background {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -1022,114 +1015,189 @@ section,
   object-fit: cover;
 }
 
+/* Cinematic Warm Overlay */
 .hero .video-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: color-mix(in srgb, var(--background-color), transparent 20%);
+  background: linear-gradient(
+    90deg,
+    rgba(59, 40, 30, 0.90) 0%,
+    rgba(59, 40, 30, 0.70) 48%,
+    rgba(59, 40, 30, 0.30) 100%
+  );
   z-index: 2;
 }
 
+/* Hero Content */
+.hero .hero-content {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
 
-/* Ensure hero text and buttons sit above the dark overlay */
 #hero .container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+}
+
+/* Text Layout */
+.hero .hero-content .row {
+  justify-content: flex-start;
+}
+
+.hero .hero-content .col-lg-8 {
+  text-align: left;
+  max-width: 850px;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  color: var(--marlowby-cream);
+  font-family: var(--heading-font);
+  font-size: clamp(3rem, 5vw, 4.7rem);
   font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
   margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
+  max-width: 780px;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2.5rem;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  line-height: 1.6;
+  color: rgba(250, 246, 240, 0.88);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 680px;
+  margin-bottom: 2.3rem;
 }
 
-@media (max-width: 768px) {
-  .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
+/* Now Shipping Banner */
+.hero .location-banner {
+  background: rgba(250, 246, 240, 0.12);
+  border: 1px solid var(--marlowby-gold);
+  border-radius: 5px !important;
+  color: var(--marlowby-cream);
+  backdrop-filter: blur(8px);
+  letter-spacing: 0.3px;
+  font-size: 0.9rem;
+  padding: 11px 17px !important;
+  box-shadow: none !important;
 }
 
+.hero .location-banner .live-dot {
+  background: var(--marlowby-gold);
+  color: var(--marlowby-brown);
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  padding: 5px 8px;
+}
+
+.hero .location-banner .live-dot::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--marlowby-terracotta);
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Buttons */
 .hero .hero-buttons {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  gap: 14px;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .hero .hero-buttons .btn {
-  padding: 0.875rem 2rem;
+  padding: 14px 25px;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: all 0.3s ease;
   text-decoration: none;
-  border: 2px solid transparent;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .hero .hero-buttons .btn.btn-primary {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  border-color: var(--accent-color);
+  background: var(--marlowby-terracotta);
+  color: var(--marlowby-cream);
+  border: 1px solid var(--marlowby-terracotta);
 }
 
 .hero .hero-buttons .btn.btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 15%);
-  border-color: color-mix(in srgb, var(--accent-color), black 15%);
-  transform: translateY(-2px);
+  background: var(--marlowby-gold);
+  border-color: var(--marlowby-gold);
+  color: var(--marlowby-brown);
+  transform: translateY(-3px);
 }
 
 .hero .hero-buttons .btn.btn-outline {
-  background-color: transparent;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 50%);
+  background: transparent;
+  color: var(--marlowby-cream);
+  border: 1px solid rgba(250, 246, 240, 0.7);
 }
 
 .hero .hero-buttons .btn.btn-outline:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent-color);
-  color: var(--accent-color);
+  background: var(--marlowby-cream);
+  color: var(--marlowby-brown);
+  border-color: var(--marlowby-cream);
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero {
+    min-height: 85vh;
+    padding: 110px 0 70px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 85vh;
+    padding: 100px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+  }
+
+  .hero .video-overlay {
+    background: rgba(59, 40, 30, 0.78);
+  }
 }
 
 @media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.3rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .location-banner {
+    font-size: 0.75rem;
+    text-align: left;
+  }
+
+  .hero .hero-buttons {
+    gap: 10px;
+  }
+
   .hero .hero-buttons .btn {
-    padding: 0.75rem 1.5rem;
+    padding: 12px 17px;
     font-size: 0.9rem;
   }
 }
 
-@media (max-width: 992px) {
-  .hero {
-    padding: 80px 0;
-    min-height: 80vh;
-  }
-
-  .hero .hero-content {
-    min-height: 80vh;
-  }
-}
 
 /*--------------------------------------------------------------
 # About Section
