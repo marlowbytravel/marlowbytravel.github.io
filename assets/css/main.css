@@ -4084,3 +4084,86 @@ margin-right: 10px;
     vertical-align: middle;
 }
 }
+
+/* Marlowby Footer - Warm Cream Version */
+
+.footer {
+  background: var(--marlowby-cream);
+  color: var(--marlowby-brown);
+  border-top: 3px solid var(--marlowby-terracotta);
+}
+
+.footer .footer-content .logo span {
+  color: var(--marlowby-brown);
+}
+
+.footer .footer-content p {
+  color: var(--marlowby-brown);
+  opacity: 0.85;
+}
+
+.footer .newsletter-form h5 {
+  color: var(--marlowby-terracotta);
+}
+
+.footer h4 {
+  color: var(--marlowby-brown);
+}
+
+.footer h4:after {
+  background-color: var(--marlowby-terracotta);
+}
+
+.footer .footer-links ul a {
+  color: var(--marlowby-brown);
+  opacity: 0.85;
+}
+
+.footer .footer-links ul a:hover {
+  color: var(--marlowby-terracotta);
+}
+
+.footer .footer-links ul a i {
+  color: var(--marlowby-olive);
+}
+
+.footer .footer-contact .contact-item .contact-icon {
+  background-color: var(--marlowby-olive);
+}
+
+.footer .footer-contact .contact-item .contact-icon i {
+  color: var(--marlowby-cream);
+}
+
+.footer .footer-contact .contact-item .contact-info p {
+  color: var(--marlowby-brown);
+}
+
+.footer .footer-bottom {
+  background-color: var(--marlowby-brown);
+  border-top: 2px solid var(--marlowby-gold);
+}
+
+.footer .footer-bottom .copyright p {
+  color: var(--marlowby-cream);
+}
+
+.footer .footer-bottom .copyright .sitename {
+  color: var(--marlowby-gold);
+}
+
+.footer .footer-bottom .footer-bottom-links a {
+  color: var(--marlowby-cream);
+}
+
+.footer .footer-bottom .footer-bottom-links a:hover {
+  color: var(--marlowby-gold);
+}
+
+.footer .footer-bottom .credits {
+  color: var(--marlowby-cream);
+}
+
+.footer .footer-bottom .credits a {
+  color: var(--marlowby-gold);
+}
