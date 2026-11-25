@@ -1199,173 +1199,193 @@ section,
 
 }
 
-
 /*--------------------------------------------------------------
-# About Section
+# About Section - Marlowby Travel Journal
 --------------------------------------------------------------*/
+
 .about {
-  padding-top: 60px;
-  background-color: var(--background-color);
-  padding-bottom: 20px;
+  padding: 90px 0;
+  background-color: var(--marlowby-cream);
+  position: relative;
 }
 
-.about .content h2 {
+/* Section Heading */
+.about .section-title {
+  margin-bottom: 55px;
+}
+
+.about .section-title .subtitle {
+  color: var(--marlowby-terracotta);
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.about .section-title h2 {
+  color: var(--marlowby-brown);
   font-family: var(--heading-font);
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.3;
-  color: var(--heading-color);
-  margin-bottom: 2rem;
-  letter-spacing: -0.02em;
+  font-size: 2.8rem;
+  font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .about .content h2 {
-    font-size: 2rem;
-  }
-}
-
-.about .content p {
-  font-size: 1.125rem;
+.about .section-title p {
+  color: var(--marlowby-brown);
+  opacity: 0.8;
+  font-size: 1.05rem;
   line-height: 1.8;
-  color: var(--default-color);
-  margin-bottom: 2rem;
 }
 
-.about .content p.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-  color: color-mix(in srgb, var(--default-color), transparent 10%);
-  margin-bottom: 2.5rem;
+/* Left Column - Brand Story */
+.about .section-eyebrow {
+  display: inline-block;
+  color: var(--marlowby-terracotta);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-bottom: 15px;
 }
 
-.about .stats-wrapper {
-  display: flex;
-  gap: 3rem;
-  margin: 3rem 0;
-  padding: 2.5rem 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+.about .col-lg-6 > h2 {
+  font-family: var(--heading-font);
+  color: var(--marlowby-brown);
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 22px;
 }
 
-@media (max-width: 576px) {
-  .about .stats-wrapper {
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
-  }
+.about .col-lg-6 > p {
+  color: var(--marlowby-brown);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  opacity: 0.85;
 }
 
-.about .stats-wrapper .stat-item {
+.about .col-lg-6 > p.lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 1;
+}
+
+/* Statistics */
+.about .about-stat-box {
+  height: 100%;
+  padding: 22px 18px;
+  background: rgba(217, 160, 54, 0.10);
+  border-top: 3px solid var(--marlowby-gold);
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
-}
-
-.about .stats-wrapper .stat-item .number {
-  font-size: 3rem;
-  font-weight: 200;
-  color: var(--accent-color);
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.about .stats-wrapper .stat-item .label {
-  font-size: 0.875rem;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 500;
-}
-
-.about .cta-wrapper {
-  margin-top: 2.5rem;
-}
-
-.about .cta-wrapper .btn-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.125rem;
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 400;
-  transition: all 0.3s ease;
-}
-
-.about .cta-wrapper .btn-link i {
+  gap: 8px;
   transition: transform 0.3s ease;
 }
 
-.about .cta-wrapper .btn-link:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 20%);
+.about .about-stat-box:hover {
+  transform: translateY(-4px);
 }
 
-.about .cta-wrapper .btn-link:hover i {
-  transform: translateX(4px);
+.about .stat-number {
+  color: var(--marlowby-terracotta);
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
-.about .image-wrapper {
-  position: relative;
-  padding-left: 2rem;
+.about .stat-label {
+  color: var(--marlowby-brown);
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
-@media (max-width: 992px) {
-  .about .image-wrapper {
-    padding-left: 0;
-    margin-top: 3rem;
-  }
+/* Right Column - Brand Pillars */
+.about .about-pillar-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background: #FFFFFF;
+  border: 1px solid rgba(94, 107, 71, 0.18);
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(59, 40, 30, 0.05);
+  transition: all 0.3s ease;
 }
 
-.about .image-wrapper img {
-  border-radius: 6px;
-  box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+.about .about-pillar-card:hover {
+  transform: translateX(5px);
+  border-color: var(--marlowby-gold);
+  box-shadow: 0 10px 25px rgba(59, 40, 30, 0.09);
 }
 
-.about .image-wrapper .floating-element {
-  position: absolute;
-  bottom: -2rem;
-  left: -2rem;
-  background-color: var(--surface-color);
-  border-left: 4px solid var(--marlowby-gold, #D9A036)
-  padding: 1.75rem;
-  border-radius: 6px;
-  max-width: 320px;
-  box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 80%);
+/* Pillar Icons */
+.about .pillar-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(94, 107, 71, 0.12);
+  border-radius: 50%;
 }
 
-@media (max-width: 992px) {
-  .about .image-wrapper .floating-element {
-    position: static;
-    margin-top: 2rem;
-    max-width: none;
-  }
+.about .pillar-icon i {
+  color: var(--marlowby-olive);
+  font-size: 1.4rem;
 }
 
-.about .image-wrapper .floating-element .quote-content blockquote {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--default-color);
-  margin-bottom: 1rem;
-  font-style: italic;
-  font-weight: 300;
+/* Pillar Text */
+.about .about-pillar-card h4 {
+  color: var(--marlowby-brown);
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 9px;
 }
 
-.about .image-wrapper .floating-element .quote-content cite {
-  font-size: 0.875rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-style: normal;
-  font-weight: 500;
+.about .about-pillar-card p {
+  color: var(--marlowby-brown);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.8;
 }
 
+/* Responsive */
 @media (max-width: 992px) {
   .about {
-    padding: 80px 0;
+    padding: 75px 0;
+  }
+
+  .about .about-pillar-card {
+    padding: 22px;
   }
 }
 
 @media (max-width: 576px) {
   .about {
     padding: 60px 0;
+  }
+
+  .about .section-title h2 {
+    font-size: 2.2rem;
+  }
+
+  .about .col-lg-6 > h2 {
+    font-size: 2.3rem;
+  }
+
+  .about .about-pillar-card {
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .about .pillar-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .about .stat-number {
+    font-size: 1.5rem;
   }
 }
 
