@@ -445,42 +445,48 @@ h6 {
   }
 }
 
+
 /*--------------------------------------------------------------
-# Global Footer
+# Global Footer - Marlowby Brand Theme
 --------------------------------------------------------------*/
+
 .footer {
-  color: var(--default-color);
-  background: var(--background-color);
+  color: var(--marlowby-cream);
+  background: var(--marlowby-brown);
   font-size: 14px;
   padding: 80px 0 0;
   position: relative;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-top: 3px solid var(--marlowby-terracotta);
 }
 
+/* Logo */
 .footer .footer-content .logo {
   line-height: 1;
 }
 
 .footer .footer-content .logo span {
-  color: var(--heading-color);
+  color: var(--marlowby-cream);
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 0.5px;
   font-family: var(--heading-font);
 }
 
+/* Description */
 .footer .footer-content p {
   font-size: 15px;
-  line-height: 1.6;
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  line-height: 1.7;
+  color: var(--marlowby-cream);
+  opacity: 0.85;
 }
 
+/* Newsletter */
 .footer .newsletter-form {
   margin-top: 30px;
 }
 
 .footer .newsletter-form h5 {
-  color: var(--heading-color);
+  color: var(--marlowby-gold);
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -492,15 +498,15 @@ h6 {
   display: flex;
   border-radius: 50px;
   overflow: hidden;
-  box-shadow: 0 2px 10px color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .footer .newsletter-form input[type=email] {
   flex: 1;
   padding: 12px 20px;
   border: none;
-  background-color: var(--surface-color);
-  color: var(--default-color);
+  background-color: var(--marlowby-cream);
+  color: var(--marlowby-brown);
   font-size: 14px;
 }
 
@@ -510,12 +516,13 @@ h6 {
 }
 
 .footer .newsletter-form input[type=email]::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
+  color: var(--marlowby-brown);
+  opacity: 0.6;
 }
 
 .footer .newsletter-form .btn-subscribe {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: var(--marlowby-terracotta);
+  color: var(--marlowby-cream);
   border: none;
   padding: 12px 20px;
   cursor: pointer;
@@ -523,7 +530,8 @@ h6 {
 }
 
 .footer .newsletter-form .btn-subscribe:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 10%);
+  background-color: var(--marlowby-gold);
+  color: var(--marlowby-brown);
 }
 
 .footer .newsletter-form .btn-subscribe i {
@@ -537,8 +545,9 @@ h6 {
   margin-top: 8px;
 }
 
+/* Section Headings */
 .footer h4 {
-  color: var(--heading-color);
+  color: var(--marlowby-gold);
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 25px;
@@ -553,9 +562,10 @@ h6 {
   bottom: -8px;
   width: 30px;
   height: 2px;
-  background-color: var(--accent-color);
+  background-color: var(--marlowby-terracotta);
 }
 
+/* Navigation Links */
 .footer .footer-links ul {
   list-style: none;
   padding: 0;
@@ -574,7 +584,8 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  color: var(--marlowby-cream);
+  opacity: 0.8;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -583,15 +594,17 @@ h6 {
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: var(--marlowby-gold);
+  opacity: 1;
 }
 
 .footer .footer-links ul a i {
   margin-right: 8px;
   font-size: 12px;
-  color: var(--accent-color);
+  color: var(--marlowby-terracotta);
 }
 
+/* Contact Section */
 .footer .footer-contact .contact-item {
   display: flex;
   align-items: flex-start;
@@ -601,7 +614,7 @@ h6 {
 .footer .footer-contact .contact-item .contact-icon {
   width: 40px;
   height: 40px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background-color: var(--marlowby-olive);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -611,17 +624,19 @@ h6 {
 }
 
 .footer .footer-contact .contact-item .contact-icon i {
-  color: var(--accent-color);
+  color: var(--marlowby-cream);
   font-size: 16px;
 }
 
 .footer .footer-contact .contact-item .contact-info p {
   margin: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--marlowby-cream);
+  opacity: 0.85;
   font-size: 14px;
   line-height: 1.5;
 }
 
+/* Social Links */
 .footer .social-links {
   display: flex;
   gap: 12px;
@@ -631,8 +646,8 @@ h6 {
 .footer .social-links a {
   width: 42px;
   height: 42px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 92%);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  background-color: var(--marlowby-olive);
+  color: var(--marlowby-cream);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -642,8 +657,8 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: var(--marlowby-terracotta);
+  color: var(--marlowby-cream);
   transform: translateY(-3px);
 }
 
@@ -651,17 +666,22 @@ h6 {
   font-size: 16px;
 }
 
+/* Footer Bottom */
 .footer .footer-bottom {
   margin-top: 50px;
   padding: 25px 0;
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  background-color: var(--marlowby-olive);
+  border-top: 1px solid var(--marlowby-gold);
 }
 
 .footer .footer-bottom .copyright p {
   margin: 0;
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--marlowby-cream);
+}
+
+.footer .footer-bottom .copyright .sitename {
+  color: var(--marlowby-gold);
 }
 
 @media (max-width: 991px) {
@@ -684,10 +704,11 @@ h6 {
 }
 
 .footer .footer-bottom .footer-bottom-links a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: var(--marlowby-cream);
   font-size: 13px;
   margin-left: 20px;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .footer .footer-bottom .footer-bottom-links a:first-child {
@@ -695,7 +716,7 @@ h6 {
 }
 
 .footer .footer-bottom .footer-bottom-links a:hover {
-  color: var(--accent-color);
+  color: var(--marlowby-gold);
 }
 
 @media (max-width: 991px) {
@@ -707,7 +728,7 @@ h6 {
 .footer .footer-bottom .credits {
   text-align: right;
   font-size: 13px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: var(--marlowby-cream);
 }
 
 @media (max-width: 991px) {
@@ -717,7 +738,7 @@ h6 {
 }
 
 .footer .footer-bottom .credits a {
-  color: var(--accent-color);
+  color: var(--marlowby-gold);
   text-decoration: none;
 }
 
@@ -725,6 +746,7 @@ h6 {
   text-decoration: underline;
 }
 
+/* Mobile Layout */
 @media (max-width: 768px) {
   .footer {
     padding: 60px 0 0;
@@ -741,25 +763,27 @@ h6 {
   }
 }
 
-input[type=text],
-input[type=email],
-textarea {
-  color: var(--default-color);
-  background-color: var(--surface-color);
+/* Footer Form Styling Only */
+.footer input[type=text],
+.footer input[type=email],
+.footer textarea {
+  color: var(--marlowby-brown);
+  background-color: var(--marlowby-cream);
   font-size: 14px;
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-color: var(--marlowby-olive);
 }
 
-input[type=text]:focus,
-input[type=email]:focus,
-textarea:focus {
-  border-color: var(--accent-color);
+.footer input[type=text]:focus,
+.footer input[type=email]:focus,
+.footer textarea:focus {
+  border-color: var(--marlowby-terracotta);
 }
 
-input[type=text]::placeholder,
-input[type=email]::placeholder,
-textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+.footer input[type=text]::placeholder,
+.footer input[type=email]::placeholder,
+.footer textarea::placeholder {
+  color: var(--marlowby-brown);
+  opacity: 0.6;
 }
 
 /*--------------------------------------------------------------
