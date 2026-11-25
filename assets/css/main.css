@@ -3416,3 +3416,28 @@ section,
   background: var(--marlowby-cream);
   color: var(--marlowby-brown);
 }
+/* About Section - Lighter Editorial Typography */
+
+#about .section-title h2 {
+  font-weight: 300 !important;
+  letter-spacing: -0.5px;
+}
+
+#about .col-lg-6 > h2 {
+  font-weight: 300 !important;
+  letter-spacing: -0.5px;
+}
+
+#about .section-title .subtitle,
+#about .section-eyebrow {
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+#about .about-pillar-card h4 {
+  font-weight: 500;
+}
+
+#about .stat-number {
+  font-weight: 400;
+}
