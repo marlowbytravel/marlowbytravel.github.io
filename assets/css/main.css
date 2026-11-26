@@ -1211,7 +1211,7 @@ section,
 
 /* Section Heading */
 .about .section-title {
-  margin-bottom: 55px;
+  margin-bottom: 45px;
 }
 
 .about .section-title .subtitle {
@@ -3440,4 +3440,17 @@ section,
 
 #about .stat-number {
   font-weight: 400;
+}
+
+/* Matching Section Titles: About, How It Works, and Cities */
+.about .section-title h2,
+.how-it-works .section-title h2,
+.cities .section-title h2 {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.2;
+  color: var(--heading-color);
+  margin-bottom: 14px;
 }
