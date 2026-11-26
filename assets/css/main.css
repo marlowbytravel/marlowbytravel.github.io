@@ -3454,3 +3454,9 @@ section,
   color: var(--heading-color);
   margin-bottom: 14px;
 }
+/* Disable scroll reveal animations */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
