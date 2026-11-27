@@ -1,10 +1,4 @@
-/**
-* Template Name: LeadPage
-* Template URL: https://bootstrapmade.com/leadpage-bootstrap-landing-page-template/
-* Updated: Aug 12 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 (function() {
   "use strict";
@@ -218,3 +212,49 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+document.addEventListener("DOMContentLoaded", function () {
+  const flavorBtns = document.querySelectorAll(".flavor-btn");
+  const addonSelect = document.getElementById("addon-select");
+  const dietChecks = document.querySelectorAll(".diet-check");
+  const giftNote = document.getElementById("gift-note");
+  const saveBtn = document.getElementById("save-box-btn");
+  const saveFeedback = document.getElementById("save-feedback");
+
+  // Update Flavor Focus
+  flavorBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      flavorBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById("summary-flavor").textContent = btn.dataset.value;
+    });
+  });
+
+  // Update Bonus Add-On
+  addonSelect.addEventListener("change", () => {
+    document.getElementById("summary-addon").textContent = addonSelect.value;
+  });
+
+  // Update Dietary Preferences
+  dietChecks.forEach(check => {
+    check.addEventListener("change", () => {
+      const selected = Array.from(dietChecks)
+        .filter(c => c.checked)
+        .map(c => c.value);
+      document.getElementById("summary-diet").textContent = selected.length ? selected.join(", ") : "None";
+    });
+  });
+
+  // Update Gift Note
+  giftNote.addEventListener("input", () => {
+    document.getElementById("summary-note").textContent = giftNote.value.trim() || "No gift note";
+  });
+
+  // Save button feedback & smooth scroll to Pricing
+  saveBtn.addEventListener("click", () => {
+    saveFeedback.classList.remove("d-none");
+    const pricingSection = document.getElementById("pricing");
+    if (pricingSection) {
+      setTimeout(() => pricingSection.scrollIntoView({ behavior: "smooth" }), 500);
+    }
+  });
+});
