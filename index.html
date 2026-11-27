@@ -695,130 +695,132 @@ document.getElementById("city-modal")?.addEventListener("click", event => {
       </div>
 
     </section><!-- /Pricing Section -->
-<!-- Services Section -->
-    <section id="custom-box" class="custom box section">
+<section id="custom-box" class="py-5" style="background-color: #faf7f2;">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+      <span class="text-uppercase fw-semibold small" style="color: #8c6d46; letter-spacing: 1.5px;">Tailor Your Delivery</span>
+      <h2 class="fw-bold mt-2" style="color: #2c241e;">Personalize Your Monthly Box</h2>
+      <p class="text-muted mx-auto" style="max-width: 600px;">
+        Every subscriber receives that month's featured U.S. city box—customize your flavor profile, dietary preferences, and Premium bonus add-on below.
+      </p>
+    </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span class="subtitle">Create Your Own Box</span>
-        <h2>Create Your Box</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="services-showcase mt-5">
-          <div class="row g-0">
-            <div class="col-lg-6">
-              <div class="featured-service">
-                <div class="service-image">
-                  <img src="assets/img/services/services-3.webp" alt="Featured Service" class="img-fluid">
-                </div>
-                <div class="service-overlay">
-                  <div class="overlay-content">
-                    <h3>Digital Transformation</h3>
-                    <p>Revolutionizing businesses through cutting-edge technology solutions and strategic digital initiatives.</p>
-                    <a href="service-details.html" class="service-link">
-                      <span>Discover More</span>
-                      <i class="bi bi-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
+    <div class="row g-4 align-items-stretch">
+      <!-- Left Column: Customization Controls -->
+      <div class="col-lg-7">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white">
+          
+          <!-- Step 1: Flavor Profile -->
+          <div class="mb-4">
+            <label class="form-label fw-bold text-dark">1. Choose Your Flavor Focus</label>
+            <div class="row g-2" id="flavor-options">
+              <div class="col-6 col-sm-3">
+                <button type="button" class="btn btn-outline-dark w-100 py-2 flavor-btn active" data-value="Balanced Mix">Balanced Mix</button>
               </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="services-list">
-
-                <div class="service-item">
-                  <div class="service-icon">
-                    <i class="bi bi-palette"></i>
-                  </div>
-                  <div class="service-content">
-                    <h4><a href="service-details.html">Brand Strategy</a></h4>
-                    <p>Crafting compelling brand narratives that resonate with your target audience and establish market leadership.</p>
-                  </div>
-                </div>
-
-                <div class="service-item">
-                  <div class="service-icon">
-                    <i class="bi bi-code-slash"></i>
-                  </div>
-                  <div class="service-content">
-                    <h4><a href="service-details.html">Technical Development</a></h4>
-                    <p>Building scalable solutions with modern technologies that drive efficiency and enhance user experiences.</p>
-                  </div>
-                </div>
-
-                <div class="service-item">
-                  <div class="service-icon">
-                    <i class="bi bi-graph-up-arrow"></i>
-                  </div>
-                  <div class="service-content">
-                    <h4><a href="service-details.html">Growth Analytics</a></h4>
-                    <p>Leveraging data-driven insights to optimize performance and accelerate sustainable business growth.</p>
-                  </div>
-                </div>
-
+              <div class="col-6 col-sm-3">
+                <button type="button" class="btn btn-outline-dark w-100 py-2 flavor-btn" data-value="Sweet & Treats">Sweet & Treats</button>
+              </div>
+              <div class="col-6 col-sm-3">
+                <button type="button" class="btn btn-outline-dark w-100 py-2 flavor-btn" data-value="Savory & Spicy">Savory & Spicy</button>
+              </div>
+              <div class="col-6 col-sm-3">
+                <button type="button" class="btn btn-outline-dark w-100 py-2 flavor-btn" data-value="Coffee & Tea">Coffee & Tea</button>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="additional-services mt-5">
-          <div class="row g-5">
-
-            <div class="col-lg-4">
-              <div class="service-card">
-                <div class="card-image">
-                  <img src="assets/img/services/services-7.webp" alt="Consulting Services" class="img-fluid">
-                </div>
-                <div class="card-body">
-                  <h5><a href="service-details.html">Strategic Consulting</a></h5>
-                  <p>Expert guidance to navigate complex business challenges and identify new opportunities for sustainable growth and market expansion.</p>
-                  <a href="service-details.html" class="read-more">
-                    Learn More <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
+          <!-- Step 2: Bonus Local Add-On (Premium Perk) -->
+          <div class="mb-4">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <label for="addon-select" class="form-label fw-bold text-dark mb-0">2. Bonus Local Add-On</label>
+              <span class="badge rounded-pill px-2 py-1" style="background-color: #8c6d46; color: #fff; font-size: 0.75rem;">
+                ★ Premium Plan Perk
+              </span>
             </div>
-
-            <div class="col-lg-4">
-              <div class="service-card">
-                <div class="card-image">
-                  <img src="assets/img/services/services-9.webp" alt="Digital Marketing" class="img-fluid">
-                </div>
-                <div class="card-body">
-                  <h5><a href="service-details.html">Digital Marketing</a></h5>
-                  <p>Comprehensive marketing strategies that amplify your online presence and drive meaningful engagement across all digital channels.</p>
-                  <a href="service-details.html" class="read-more">
-                    Learn More <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4">
-              <div class="service-card">
-                <div class="card-image">
-                  <img src="assets/img/services/services-11.webp" alt="Innovation Labs" class="img-fluid">
-                </div>
-                <div class="card-body">
-                  <h5><a href="service-details.html">Innovation Labs</a></h5>
-                  <p>Experimental environments where breakthrough ideas come to life through rapid prototyping and collaborative innovation processes.</p>
-                  <a href="service-details.html" class="read-more">
-                    Learn More <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
+            <p class="small text-muted mb-2">Included free with our <strong>Premium Explorer Plan</strong> (or +$8 on Standard).</p>
+            <select class="form-select rounded-3 py-2" id="addon-select">
+              <option value="None (Standard Box)" selected>No Add-On (Standard Box — 4–6 Items)</option>
+              <option value="Small-Batch Roast Coffee Beans (8 oz) [Premium]">Small-Batch Roast Coffee Beans (8 oz) — Free w/ Premium</option>
+              <option value="Artisan Caramel & Cheddar Popcorn [Premium]">Artisan Caramel & Cheddar Popcorn — Free w/ Premium</option>
+              <option value="Spicy Chicago Giardiniera Relish [Premium]">Spicy Chicago Giardiniera Relish — Free w/ Premium</option>
+              <option value="Illustrated Neighborhood Postcard Set [Premium]">Illustrated Neighborhood Postcard Set — Free w/ Premium</option>
+            </select>
           </div>
-        </div>
 
+          <!-- Step 3: Dietary Preferences -->
+          <div class="mb-4">
+            <label class="form-label fw-bold text-dark">3. Dietary Preferences</label>
+            <div class="d-flex flex-wrap gap-3">
+              <div class="form-check">
+                <input class="form-check-input diet-check" type="checkbox" value="Vegetarian" id="dietVeg">
+                <label class="form-check-label" for="dietVeg">Vegetarian</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input diet-check" type="checkbox" value="Nut-Free" id="dietNut">
+                <label class="form-check-label" for="dietNut">Nut-Free</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input diet-check" type="checkbox" value="Gluten-Friendly" id="dietGluten">
+                <label class="form-check-label" for="dietGluten">Gluten-Friendly</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input diet-check" type="checkbox" value="Caffeine-Free" id="dietCaff">
+                <label class="form-check-label" for="dietCaff">Caffeine-Free</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Gift Note -->
+          <div>
+            <label for="gift-note" class="form-label fw-bold text-dark">4. Optional Gift Card Message</label>
+            <input type="text" class="form-control rounded-3 py-2" id="gift-note" placeholder="e.g., Happy Birthday! Enjoy a taste of Chicago.">
+          </div>
+
+        </div>
       </div>
 
-    </section><!-- /Services Section -->
+      <!-- Right Column: Live Box Summary -->
+      <div class="col-lg-5">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-white d-flex flex-column justify-content-between" style="background-color: #3f4e3c;">
+          <div>
+            <span class="badge bg-light text-dark mb-3 px-3 py-2 rounded-pill">Your Custom Profile</span>
+            <h4 class="fw-bold mb-1">Chicago, IL Monthly Box</h4>
+            <p class="small opacity-75 mb-4">4–6 full-size local items + fold-out neighborhood map</p>
 
+            <ul class="list-unstyled border-top border-bottom border-light border-opacity-25 py-3 mb-4">
+              <li class="mb-2 d-flex justify-content-between">
+                <span class="opacity-75">Flavor Focus:</span>
+                <strong id="summary-flavor">Balanced Mix</strong>
+              </li>
+              <li class="mb-2 d-flex justify-content-between">
+                <span class="opacity-75">Bonus Add-On:</span>
+                <strong id="summary-addon" class="text-end ms-2">None (Standard Box)</strong>
+              </li>
+              <li class="mb-2 d-flex justify-content-between">
+                <span class="opacity-75">Dietary Notes:</span>
+                <strong id="summary-diet">None</strong>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span class="opacity-75">Gift Message:</span>
+                <strong id="summary-note" class="text-end ms-2">No gift note</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <button type="button" id="save-box-btn" class="btn btn-light w-100 py-2 fw-bold rounded-pill" style="color: #2c241e;">
+              Save Preferences & Choose Plan →
+            </button>
+            <p id="save-feedback" class="small text-center mt-2 mb-0 d-none" style="color: #d9ead3;">
+              ✓ Preferences saved! Scroll down to pick your subscription plan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- Faq Section -->
     <section id="faq" class="faq section">
 
