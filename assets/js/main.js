@@ -213,14 +213,14 @@
 
 })();
 document.addEventListener("DOMContentLoaded", function () {
-  const flavorBtns = document.querySelectorAll(".flavor-btn");
+  const flavorBtns = document.querySelectorAll(".flavor-pill");
   const addonSelect = document.getElementById("addon-select");
-  const dietChecks = document.querySelectorAll(".diet-check");
+  const dietBtns = document.querySelectorAll(".diet-pill");
   const giftNote = document.getElementById("gift-note");
   const saveBtn = document.getElementById("save-box-btn");
   const saveFeedback = document.getElementById("save-feedback");
 
-  // Update Flavor Focus
+  // Flavor Focus selection
   flavorBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       flavorBtns.forEach(b => b.classList.remove("active"));
@@ -229,32 +229,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Update Bonus Add-On
+  // Bonus Add-On & automatic Recommended Tier update
   addonSelect.addEventListener("change", () => {
-    document.getElementById("summary-addon").textContent = addonSelect.value;
+    const selectedOption = addonSelect.options[addonSelect.selectedIndex];
+    document.getElementById("summary-addon").textContent = selectedOption.value;
+
+    const tierEl = document.getElementById("summary-tier");
+    if (selectedOption.dataset.premium === "true") {
+      tierEl.textContent = "Premium Explorer";
+    } else {
+      tierEl.textContent = "Standard Explorer";
+    }
   });
 
-  // Update Dietary Preferences
-  dietChecks.forEach(check => {
-    check.addEventListener("change", () => {
-      const selected = Array.from(dietChecks)
-        .filter(c => c.checked)
-        .map(c => c.value);
-      document.getElementById("summary-diet").textContent = selected.length ? selected.join(", ") : "None";
+  // Multi-select Dietary & Lifestyle pills
+  dietBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      const activeDiets = Array.from(dietBtns)
+        .filter(b => b.classList.contains("active"))
+        .map(b => b.dataset.value);
+      document.getElementById("summary-diet").textContent = activeDiets.length ? activeDiets.join(", ") : "None";
     });
   });
 
-  // Update Gift Note
+  // Gift Card Note live update
   giftNote.addEventListener("input", () => {
     document.getElementById("summary-note").textContent = giftNote.value.trim() || "No gift note";
   });
 
-  // Save button feedback & smooth scroll to Pricing
+  // Save Preferences & smooth scroll to Pricing
   saveBtn.addEventListener("click", () => {
     saveFeedback.classList.remove("d-none");
     const pricingSection = document.getElementById("pricing");
     if (pricingSection) {
-      setTimeout(() => pricingSection.scrollIntoView({ behavior: "smooth" }), 500);
+      setTimeout(() => {
+        pricingSection.scrollIntoView({ behavior: "smooth" });
+      }, 450);
     }
   });
 });
+
+
