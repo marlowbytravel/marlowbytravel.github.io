@@ -619,135 +619,131 @@ document.getElementById("city-modal")?.addEventListener("click", event => {
 });
 </script>
    
-<!-- Pricing Section -->
-<div class="container section-title">
-    <span class="subtitle">CUSTOMIZE</span> <!-- Copy the exact tag/class from your #pricing section -->
+<!-- Custom Box Section -->
+<section id="custom-box" class="section">
+  <!-- Section Header (Matches template section-title style) -->
+  <div class="container section-title">
+    <span class="subtitle">CUSTOMIZE</span>
     <h2>Personalize Your Box</h2>
-    <p>Every subscriber receives that month's featured U.S. city box—customize your flavor profile, dietary preferences, and Premium bonus add-on below.</p>
+    <p>Each month brings a surprise U.S. city to your doorstep. Set your tasting preferences, dietary needs, and optional Premium add-on below.</p>
   </div>
 
-  <div class="container">
-    <div class="row g-4 align-items-stretch">
+  <div class="container custom-box-wrapper">
+    <div class="custom-box-grid">
       
-      <!-- Left Column: Customization Controls -->
-      <div class="col-lg-7">
-        <div class="card border shadow-sm rounded-4 p-4 h-100 bg-white">
-          
-          <!-- Step 1: Flavor Profile -->
-          <div class="mb-4">
-            <label class="form-label fw-bold text-dark">1. Choose Your Flavor Focus</label>
-            <div class="row g-2" id="flavor-options">
-              <div class="col-6 col-sm-3">
-                <button type="button" class="btn btn-outline-dark w-100 py-2 flavor-btn active" data-value="Balanced Mix">Balanced Mix</button>
-              </div>
-              <div class="col-6 col-sm-3">
-                <button type="button" class="btn btn-outline-dark w-100 py-2 flavor-btn" data-value="Sweet & Treats">Sweet & Treats</button>
-              </div>
-              <div class="col-6 col-sm-3">
-                <button type="button" class="btn btn-outline-dark w-100 py-2 flavor-btn" data-value="Savory & Spicy">Savory & Spicy</button>
-              </div>
-              <div class="col-6 col-sm-3">
-                <button type="button" class="btn btn-outline-dark w-100 py-2 flavor-btn" data-value="Coffee & Tea">Coffee & Tea</button>
-              </div>
-            </div>
+      <!-- Left Card: Customization Controls -->
+      <div class="custom-card">
+        
+        <!-- Step 1: Flavor Focus -->
+        <div class="custom-step">
+          <label class="custom-step-label">1. Choose Your Flavor Focus</label>
+          <div class="flavor-grid" id="flavor-options">
+            <button type="button" class="flavor-pill active" data-value="Balanced Mix">Balanced Mix</button>
+            <button type="button" class="flavor-pill" data-value="Sweet &amp; Treats">Sweet &amp; Treats</button>
+            <button type="button" class="flavor-pill" data-value="Savory &amp; Spicy">Savory &amp; Spicy</button>
+            <button type="button" class="flavor-pill" data-value="Coffee &amp; Tea">Coffee &amp; Tea</button>
           </div>
-
-          <!-- Step 2: Bonus Local Add-On (Premium Perk) -->
-          <div class="mb-4">
-            <div class="d-flex align-items-center justify-content-between mb-1">
-              <label for="addon-select" class="form-label fw-bold text-dark mb-0">2. Bonus Local Add-On</label>
-              <span class="badge rounded-pill px-2 py-1" style="background-color: #8c6d46; color: #fff; font-size: 0.75rem;">
-                ★ Premium Plan Perk
-              </span>
-            </div>
-            <p class="small text-muted mb-2">Included free with our <strong>Premium Explorer Plan</strong> (or +$8 on Standard).</p>
-            <select class="form-select rounded-3 py-2" id="addon-select">
-              <option value="None (Standard Box)" selected>No Add-On (Standard Box — 4–6 Items)</option>
-              <option value="Small-Batch Roast Coffee Beans (8 oz) [Premium]">Small-Batch Roast Coffee Beans (8 oz) — Free w/ Premium</option>
-              <option value="Artisan Caramel & Cheddar Popcorn [Premium]">Artisan Caramel & Cheddar Popcorn — Free w/ Premium</option>
-              <option value="Spicy Chicago Giardiniera Relish [Premium]">Spicy Chicago Giardiniera Relish — Free w/ Premium</option>
-              <option value="Illustrated Neighborhood Postcard Set [Premium]">Illustrated Neighborhood Postcard Set — Free w/ Premium</option>
-            </select>
-          </div>
-
-          <!-- Step 3: Dietary Preferences -->
-          <div class="mb-4">
-            <label class="form-label fw-bold text-dark">3. Dietary Preferences</label>
-            <div class="d-flex flex-wrap gap-3">
-              <div class="form-check">
-                <input class="form-check-input diet-check" type="checkbox" value="Vegetarian" id="dietVeg">
-                <label class="form-check-label" for="dietVeg">Vegetarian</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input diet-check" type="checkbox" value="Nut-Free" id="dietNut">
-                <label class="form-check-label" for="dietNut">Nut-Free</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input diet-check" type="checkbox" value="Gluten-Friendly" id="dietGluten">
-                <label class="form-check-label" for="dietGluten">Gluten-Friendly</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input diet-check" type="checkbox" value="Caffeine-Free" id="dietCaff">
-                <label class="form-check-label" for="dietCaff">Caffeine-Free</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 4: Gift Note -->
-          <div>
-            <label for="gift-note" class="form-label fw-bold text-dark">4. Optional Gift Card Message</label>
-            <input type="text" class="form-control rounded-3 py-2" id="gift-note" placeholder="e.g., Happy Birthday! Enjoy a taste of Chicago.">
-          </div>
-
         </div>
+
+        <!-- Step 2: Bonus Local Add-On -->
+        <div class="custom-step">
+          <div class="custom-step-header">
+            <label for="addon-select" class="custom-step-label mb-0">2. Bonus Local Add-On</label>
+            <span class="premium-tag">Premium Plan Perk</span>
+          </div>
+          <p class="custom-step-hint">Included free with the <strong>Premium Explorer Plan</strong> (or +$8 on Standard).</p>
+          <select class="custom-select" id="addon-select">
+            <option value="None (Standard Box)" selected>No Add-On (Standard Box — 4–6 Items)</option>
+            <option value="Local Small-Batch Coffee or Tea" data-premium="true">Local Small-Batch Coffee or Tea — Free w/ Premium</option>
+            <option value="Artisan Sweet Treat or Bakery Specialty" data-premium="true">Artisan Sweet Treat or Bakery Specialty — Free w/ Premium</option>
+            <option value="Signature Regional Sauce, Spice, or Spread" data-premium="true">Signature Regional Sauce, Spice, or Spread — Free w/ Premium</option>
+            <option value="Handcrafted Home or Paper Goods" data-premium="true">Handcrafted Home or Paper Goods — Free w/ Premium</option>
+          </select>
+        </div>
+
+        <!-- Step 3: Dietary & Lifestyle Preferences -->
+        <div class="custom-step">
+          <label class="custom-step-label">3. Dietary &amp; Lifestyle Preferences</label>
+          <div class="diet-grid" id="diet-options">
+            <button type="button" class="diet-pill" data-value="Vegetarian">
+              <svg class="check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"></polyline></svg>
+              Vegetarian
+            </button>
+            <button type="button" class="diet-pill" data-value="Vegan">
+              <svg class="check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"></polyline></svg>
+              Vegan
+            </button>
+            <button type="button" class="diet-pill" data-value="Gluten-Free">
+              <svg class="check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"></polyline></svg>
+              Gluten-Free
+            </button>
+            <button type="button" class="diet-pill" data-value="Dairy-Free">
+              <svg class="check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"></polyline></svg>
+              Dairy-Free
+            </button>
+            <button type="button" class="diet-pill" data-value="Nut-Free">
+              <svg class="check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"></polyline></svg>
+              Nut-Free
+            </button>
+            <button type="button" class="diet-pill" data-value="Caffeine-Free">
+              <svg class="check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"></polyline></svg>
+              Caffeine-Free
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 4: Optional Gift Card Message -->
+        <div class="custom-step mb-0">
+          <label for="gift-note" class="custom-step-label">4. Optional Gift Card Message</label>
+          <input type="text" class="custom-input" id="gift-note" placeholder="e.g., Happy Birthday! Enjoy exploring a new city.">
+        </div>
+
       </div>
 
-      <!-- Right Column: Live Box Summary (Clean White & Warm Gold Card) -->
-      <div class="col-lg-5">
-        <div class="card shadow-sm rounded-4 p-4 h-100 bg-white d-flex flex-column justify-content-between" style="border: 2px solid #8c6d46;">
-          <div>
-            <span class="badge rounded-pill mb-3 px-3 py-2" style="background-color: #faf7f2; color: #8c6d46; border: 1px solid #8c6d46;">
-              Your Custom Profile
-            </span>
-            <h4 class="fw-bold mb-1" style="color: #2c241e;">Chicago, IL Monthly Box</h4>
-            <p class="small text-muted mb-4">4–6 full-size local items + fold-out neighborhood map</p>
+      <!-- Right Card: Live Custom Profile Summary -->
+      <div class="summary-card">
+        <div>
+          <span class="summary-badge">Your Custom Profile</span>
+          <h3 class="summary-title">Next Month’s Mystery City Box</h3>
+          <p class="summary-subtitle">4–6 full-size local items from a surprise U.S. city + fold-out neighborhood map</p>
 
-            <ul class="list-unstyled border-top border-bottom py-3 mb-4">
-              <li class="mb-2 d-flex justify-content-between">
-                <span class="text-muted">Flavor Focus:</span>
-                <strong id="summary-flavor" style="color: #2c241e;">Balanced Mix</strong>
-              </li>
-              <li class="mb-2 d-flex justify-content-between">
-                <span class="text-muted">Bonus Add-On:</span>
-                <strong id="summary-addon" class="text-end ms-2" style="color: #2c241e;">None (Standard Box)</strong>
-              </li>
-              <li class="mb-2 d-flex justify-content-between">
-                <span class="text-muted">Dietary Notes:</span>
-                <strong id="summary-diet" style="color: #2c241e;">None</strong>
-              </li>
-              <li class="d-flex justify-content-between">
-                <span class="text-muted">Gift Message:</span>
-                <strong id="summary-note" class="text-end ms-2" style="color: #2c241e;">No gift note</strong>
-              </li>
-            </ul>
-          </div>
+          <ul class="summary-list">
+            <li>
+              <span class="summary-key">Flavor Focus</span>
+              <span class="summary-val" id="summary-flavor">Balanced Mix</span>
+            </li>
+            <li>
+              <span class="summary-key">Bonus Add-On</span>
+              <span class="summary-val" id="summary-addon">None (Standard Box)</span>
+            </li>
+            <li>
+              <span class="summary-key">Recommended Tier</span>
+              <span class="summary-val accent" id="summary-tier">Standard Explorer</span>
+            </li>
+            <li>
+              <span class="summary-key">Dietary Notes</span>
+              <span class="summary-val" id="summary-diet">None</span>
+            </li>
+            <li>
+              <span class="summary-key">Gift Message</span>
+              <span class="summary-val" id="summary-note">No gift note</span>
+            </li>
+          </ul>
+        </div>
 
-          <div>
-            <button type="button" id="save-box-btn" class="btn w-100 py-2 fw-bold rounded-pill text-white" style="background-color: #8c6d46;">
-              Save Preferences & Choose Plan →
-            </button>
-            <p id="save-feedback" class="small text-center mt-2 mb-0 d-none" style="color: #8c6d46;">
-              ✓ Preferences saved! Pick your subscription plan.
-            </p>
-          </div>
+        <div>
+          <button type="button" id="save-box-btn" class="save-profile-btn">
+            Save Preferences &amp; Choose Plan →
+          </button>
+          <p id="save-feedback" class="save-feedback d-none">
+            Preferences saved. Select your plan below to continue.
+          </p>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-     <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
