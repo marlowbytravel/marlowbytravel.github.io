@@ -3439,11 +3439,6 @@ section,
   align-items: stretch;
 }
 
-/* Unbolded editorial heading match */
-#custom-box .section-title h2 {
-  font-weight: 400;
-}
-
 .custom-card,
 .summary-card {
   background-color: #f5efe8;
