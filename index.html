@@ -695,21 +695,19 @@ document.getElementById("city-modal")?.addEventListener("click", event => {
       </div>
 
     </section><!-- /Pricing Section -->
-<section id="custom-box" class="py-5" style="background-color: #faf7f2;">
-  <div class="container">
-    <!-- Section Title -->
-    <div class="text-center mb-5">
-      <span class="text-uppercase fw-semibold small" style="color: #8c6d46; letter-spacing: 1.5px;">Tailor Your Delivery</span>
-      <h2 class="fw-bold mt-2" style="color: #2c241e;">Personalize Your Monthly Box</h2>
-      <p class="text-muted mx-auto" style="max-width: 600px;">
-        Every subscriber receives that month's featured U.S. city box—customize your flavor profile, dietary preferences, and Premium bonus add-on below.
-      </p>
-    </div>
+<section id="custom-box" class="section">
+  <!-- Uses your template's exact Section Title styling -->
+  <div class="container section-title">
+    <h2>Personalize Your Box</h2>
+    <p>Every subscriber receives that month's featured U.S. city box—customize your flavor profile, dietary preferences, and Premium bonus add-on below.</p>
+  </div>
 
+  <div class="container">
     <div class="row g-4 align-items-stretch">
+      
       <!-- Left Column: Customization Controls -->
       <div class="col-lg-7">
-        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white">
+        <div class="card border shadow-sm rounded-4 p-4 h-100 bg-white">
           
           <!-- Step 1: Flavor Profile -->
           <div class="mb-4">
@@ -780,44 +778,47 @@ document.getElementById("city-modal")?.addEventListener("click", event => {
         </div>
       </div>
 
-      <!-- Right Column: Live Box Summary -->
+      <!-- Right Column: Live Box Summary (Clean White & Warm Gold Card) -->
       <div class="col-lg-5">
-        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-white d-flex flex-column justify-content-between" style="background-color: #3f4e3c;">
+        <div class="card shadow-sm rounded-4 p-4 h-100 bg-white d-flex flex-column justify-content-between" style="border: 2px solid #8c6d46;">
           <div>
-            <span class="badge bg-light text-dark mb-3 px-3 py-2 rounded-pill">Your Custom Profile</span>
-            <h4 class="fw-bold mb-1">Chicago, IL Monthly Box</h4>
-            <p class="small opacity-75 mb-4">4–6 full-size local items + fold-out neighborhood map</p>
+            <span class="badge rounded-pill mb-3 px-3 py-2" style="background-color: #faf7f2; color: #8c6d46; border: 1px solid #8c6d46;">
+              Your Custom Profile
+            </span>
+            <h4 class="fw-bold mb-1" style="color: #2c241e;">Chicago, IL Monthly Box</h4>
+            <p class="small text-muted mb-4">4–6 full-size local items + fold-out neighborhood map</p>
 
-            <ul class="list-unstyled border-top border-bottom border-light border-opacity-25 py-3 mb-4">
+            <ul class="list-unstyled border-top border-bottom py-3 mb-4">
               <li class="mb-2 d-flex justify-content-between">
-                <span class="opacity-75">Flavor Focus:</span>
-                <strong id="summary-flavor">Balanced Mix</strong>
+                <span class="text-muted">Flavor Focus:</span>
+                <strong id="summary-flavor" style="color: #2c241e;">Balanced Mix</strong>
               </li>
               <li class="mb-2 d-flex justify-content-between">
-                <span class="opacity-75">Bonus Add-On:</span>
-                <strong id="summary-addon" class="text-end ms-2">None (Standard Box)</strong>
+                <span class="text-muted">Bonus Add-On:</span>
+                <strong id="summary-addon" class="text-end ms-2" style="color: #2c241e;">None (Standard Box)</strong>
               </li>
               <li class="mb-2 d-flex justify-content-between">
-                <span class="opacity-75">Dietary Notes:</span>
-                <strong id="summary-diet">None</strong>
+                <span class="text-muted">Dietary Notes:</span>
+                <strong id="summary-diet" style="color: #2c241e;">None</strong>
               </li>
               <li class="d-flex justify-content-between">
-                <span class="opacity-75">Gift Message:</span>
-                <strong id="summary-note" class="text-end ms-2">No gift note</strong>
+                <span class="text-muted">Gift Message:</span>
+                <strong id="summary-note" class="text-end ms-2" style="color: #2c241e;">No gift note</strong>
               </li>
             </ul>
           </div>
 
           <div>
-            <button type="button" id="save-box-btn" class="btn btn-light w-100 py-2 fw-bold rounded-pill" style="color: #2c241e;">
+            <button type="button" id="save-box-btn" class="btn w-100 py-2 fw-bold rounded-pill text-white" style="background-color: #8c6d46;">
               Save Preferences & Choose Plan →
             </button>
-            <p id="save-feedback" class="small text-center mt-2 mb-0 d-none" style="color: #d9ead3;">
+            <p id="save-feedback" class="small text-center mt-2 mb-0 d-none" style="color: #8c6d46;">
               ✓ Preferences saved! Scroll down to pick your subscription plan.
             </p>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
