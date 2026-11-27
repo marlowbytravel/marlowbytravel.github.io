@@ -3424,3 +3424,271 @@ section,
   font-weight: 400;
 }
 
+/* =========================================
+   Personalize Your Box Section (Marlowby)
+   ========================================= */
+.custom-box-wrapper {
+  max-width: 1280px;
+}
+
+.custom-box-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Unbolded editorial heading match */
+#custom-box .section-title h2 {
+  font-weight: 400;
+}
+
+.custom-card,
+.summary-card {
+  background-color: #f5efe8;
+  border: 1px solid #e4d8ca;
+  border-radius: 6px;
+  padding: 36px 40px;
+}
+
+.summary-card {
+  border-top: 3px solid #c85028;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.custom-step {
+  margin-bottom: 28px;
+}
+
+.custom-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.custom-step-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2c241e;
+  margin-bottom: 10px;
+}
+
+.custom-step-hint {
+  font-size: 0.85rem;
+  color: #6c6158;
+  margin-bottom: 10px;
+}
+
+.premium-tag {
+  background-color: #c85028;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* 2x2 Flavor Focus Grid */
+.flavor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.flavor-pill {
+  background-color: #fbf8f4;
+  border: 1px solid #dcd0c2;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #2c241e;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.flavor-pill:hover {
+  border-color: #c85028;
+}
+
+.flavor-pill.active {
+  background-color: #c85028;
+  border-color: #c85028;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Select & Text Inputs */
+.custom-select,
+.custom-input {
+  width: 100%;
+  background-color: #fbf8f4;
+  border: 1px solid #dcd0c2;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  color: #2c241e;
+  transition: border-color 0.2s ease;
+}
+
+.custom-select:focus,
+.custom-input:focus {
+  outline: none;
+  border-color: #c85028;
+}
+
+/* 3x2 Dietary Grid */
+.diet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.diet-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background-color: #fbf8f4;
+  border: 1px solid #dcd0c2;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 0.86rem;
+  font-weight: 400;
+  color: #2c241e;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.diet-pill .check-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.35;
+  transition: opacity 0.2s ease;
+}
+
+.diet-pill:hover {
+  border-color: #c85028;
+}
+
+.diet-pill.active {
+  background-color: #fdf3ef;
+  border-color: #c85028;
+  color: #c85028;
+  font-weight: 500;
+}
+
+.diet-pill.active .check-icon {
+  opacity: 1;
+}
+
+/* Right Summary Card Styling */
+.summary-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #c85028;
+  border: 1px solid #e4d8ca;
+  background-color: #fbf8f4;
+  padding: 5px 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.summary-title {
+  font-size: 1.55rem;
+  font-weight: 400;
+  color: #2c241e;
+  margin-bottom: 6px;
+}
+
+.summary-subtitle {
+  font-size: 0.88rem;
+  color: #6c6158;
+  margin-bottom: 24px;
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  border-top: 1px solid #e4d8ca;
+}
+
+.summary-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e4d8ca;
+  font-size: 0.9rem;
+}
+
+.summary-key {
+  color: #6c6158;
+  white-space: nowrap;
+}
+
+.summary-val {
+  color: #2c241e;
+  font-weight: 500;
+  text-align: right;
+}
+
+.summary-val.accent {
+  color: #c85028;
+}
+
+.save-profile-btn {
+  width: 100%;
+  background-color: #c85028;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.save-profile-btn:hover {
+  background-color: #b1431e;
+}
+
+.save-feedback {
+  text-align: center;
+  font-size: 0.84rem;
+  color: #c85028;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* Responsive stacking on smaller screens */
+@media (max-width: 991px) {
+  .custom-box-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-card,
+  .summary-card {
+    padding: 24px 20px;
+  }
+  .flavor-grid,
+  .diet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
